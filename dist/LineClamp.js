@@ -120,11 +120,17 @@ if (!Array.prototype.keys) {
          * Set Disable Flag
          */
         LineClamp.prototype.disable = function () {
+            var _this = this;
             if (this.enableFlag) {
                 window.removeEventListener('resize', this.event);
                 delete this.event;
                 this.enableFlag = false;
             }
+            Array.prototype.forEach
+                .call(this.targets, function (item, index) {
+                var original = _this.original[index];
+                item.innerHTML = original;
+            });
             return this;
         };
         /**

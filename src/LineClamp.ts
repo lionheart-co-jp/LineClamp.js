@@ -146,6 +146,12 @@ if (!(Array.prototype as any).keys){
                 this.enableFlag = false
             }
 
+            Array.prototype.forEach
+                .call(this.targets, (item: HTMLElement, index: number) => {
+                    const original = this.original[index]
+                    item.innerHTML = original
+                })
+
             return this
         }
 
