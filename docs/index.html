@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo | LineClamp</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <h1>LineClamp.js</h1>
+
+        <ul>
+            <li><a href="#demo1">Demo1 : Line 1</a></li>
+            <li><a href="#demo2">Demo2 : Line 3 and Change Ellipses character</a></li>
+            <li><a href="#demo3">Demo3 : Responsive (PC : Line 5 / < 750 : Line 4, < 480 : Line 3)</a></li>
+            <li><a href="#demo4">Demo4 : Japanese Line 5 and Change Ellipses character</a></li>
+            <li><a href="#demo5">Demo5 : Japanese Responsive (PC : Line 5 / SP : Line 3)</a></li>
+        </ul>
+
+        <section id="demo1">
+            <h2>Demo1 : Line 1</h2>
+
+            <h3>Original</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br>
+                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.<br>
+                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <h3>Clamped</h3>
+            <p class="demo1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br>
+                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.<br>
+                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+            <h3>Source code</h3>
+            <h4>JavaScript</h4>
+            <pre><code class="javascript">new LineClamp('.demo1', {lines: 1})</code></pre>
+        </section>
+
+        <section id="demo2">
+            <h2>Demo2 : Line 3 and Change Ellipses character</h2>
+
+            <h3>Original</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <h3>Clamped</h3>
+            <p class="demo2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+            <h3>Source code</h3>
+            <h4>JavaScript</h4>
+            <pre><code class="javascript">new LineClamp('.demo2', {lines: 3, ellipses: '[omit]'})</code></pre>
+        </section>
+
+        <section id="demo3">
+            <h2>Demo3 : Responsive (PC : Line 5 / < 750 : Line 4, < 480 : Line 3)</h2>
+
+            <h3>Original</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <h3>Clamped</h3>
+            <p class="demo3">Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+            <h3>Source code</h3>
+            <h4>JavaScript</h4>
+            <pre><code class="javascript">new LineClamp('.demo3', {
+    lines: 5,
+    breakpoints: {
+        750: {
+            lines: 4
+        },
+        480: {
+            lines: 3
+        }
+    }
+})</code></pre>
+        </section>
+
+        <section id="demo4">
+            <h2>Demo4 : Japanese Line 5 and Change Ellipses character</h2>
+
+            <h3>Original</h3>
+            <p>それは今てんでその支配目という事の中を思わなかろです。引続き今日がお話人は単にそんな所有ませですだってをあるからいけましがは指導使うたないて、たったにしか間違っでただろた。<br>
+                ただへつけでものも何しろ一生にじっとでだた。はたして木下さんを約束壁どう答弁がすれます国その心こちらか誤解にというお通用たでしょななて、こういう当時も私か人語学がして、大森さんの気に義務の私にたといご矛盾と至るて私事にお使用で行くようにまるでお発会を並べたたて、至極きっと説明にさますてみたのの作っなかっな。</p>
+            <h3>Clamped</h3>
+            <p class="demo4">それは今てんでその支配目という事の中を思わなかろです。引続き今日がお話人は単にそんな所有ませですだってをあるからいけましがは指導使うたないて、たったにしか間違っでただろた。<br>
+                ただへつけでものも何しろ一生にじっとでだた。はたして木下さんを約束壁どう答弁がすれます国その心こちらか誤解にというお通用たでしょななて、こういう当時も私か人語学がして、大森さんの気に義務の私にたといご矛盾と至るて私事にお使用で行くようにまるでお発会を並べたたて、至極きっと説明にさますてみたのの作っなかっな。</p>
+
+            <h3>Source code</h3>
+            <h4>JavaScript</h4>
+            <pre><code class="javascript">new LineClamp('.demo4', {lines: 5, ellipses: '…', language: 'ja'})</code></pre>
+        </section>
+
+        <section id="demo5">
+            <h2>Demo5 : Japanese Responsive (PC : Line 5 / SP : Line 3)</h2>
+
+            <h3>Original</h3>
+            <p>それは今てんでその支配目という事の中を思わなかろです。引続き今日がお話人は単にそんな所有ませですだってをあるからいけましがは指導使うたないて、たったにしか間違っでただろた。<br>
+                ただへつけでものも何しろ一生にじっとでだた。はたして木下さんを約束壁どう答弁がすれます国その心こちらか誤解にというお通用たでしょななて、こういう当時も私か人語学がして、大森さんの気に義務の私にたといご矛盾と至るて私事にお使用で行くようにまるでお発会を並べたたて、至極きっと説明にさますてみたのの作っなかっな。</p>
+            <h3>Clamped</h3>
+            <p class="demo5">それは今てんでその支配目という事の中を思わなかろです。引続き今日がお話人は単にそんな所有ませですだってをあるからいけましがは指導使うたないて、たったにしか間違っでただろた。<br>
+                ただへつけでものも何しろ一生にじっとでだた。はたして木下さんを約束壁どう答弁がすれます国その心こちらか誤解にというお通用たでしょななて、こういう当時も私か人語学がして、大森さんの気に義務の私にたといご矛盾と至るて私事にお使用で行くようにまるでお発会を並べたたて、至極きっと説明にさますてみたのの作っなかっな。</p>
+
+            <h3>Source code</h3>
+            <h4>JavaScript</h4>
+            <pre><code class="javascript">new LineClamp('.demo5', {
+    lines: 5,
+    ellipses: '…',
+    language: 'ja',
+    breakpoints: {
+        750: {
+            lines: 4
+        },
+        480: {
+            lines: 3
+        }
+    }
+})</code></pre>
+        </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/css.min.js"></script>
+    <script src="./js/LineClamp.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+
+        new LineClamp('.demo1', {lines: 1})
+        new LineClamp('.demo2', {lines: 3, ellipses: '[omit]'})
+        new LineClamp('.demo3', {lines: 5, breakpoints: {750: {lines: 4}, 480: {lines: 3}}})
+        new LineClamp('.demo4', {lines: 5, ellipses: '…', language: 'ja'})
+        new LineClamp('.demo5', {lines: 5, ellipses: '…', language: 'ja', breakpoints: {750: {lines: 4}, 480: {lines: 3}}})
+    </script>
+</body>
+</html>

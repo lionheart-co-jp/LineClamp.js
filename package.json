@@ -1,0 +1,18 @@
+{
+  "name": "LineClamp",
+  "version": "1.0.0",
+  "description": "Trim texts by assigned line",
+  "main": "index.js",
+  "author": "SUSH <s.ukai@lionheart.co.jp>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc && npm run compress && cp -f ./dist/LineClamp.min.js ./docs/js/LineClamp.min.js",
+    "watch": "tsc -w",
+    "compress": "uglifyjs ./dist/LineClamp.js -o ./dist/LineClamp.min.js -c -m --source-map"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.3.10",
+    "typescript": "^3.2.2",
+    "uglify-js": "^3.4.9"
+  }
+}

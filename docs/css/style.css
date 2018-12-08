@@ -1,0 +1,13 @@
+.wrapper {
+    margin: 0 auto;
+    max-width: 640px;
+    font-family: sans-serif;
+}
+
+.wrapper section {
+    padding: 40px 0;
+}
+
+.wrapper section ~ section {
+    border-top: 1px solid #aaa;
+}
